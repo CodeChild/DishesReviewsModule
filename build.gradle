@@ -13,6 +13,7 @@ buildscript {
                 anko       : '0.10.1',
                 butterknife: '8.5.1',
                 retrolambda: '3.7.0',
+                viewmodel  : '1.1.1',
         ]
     }
     repositories {
