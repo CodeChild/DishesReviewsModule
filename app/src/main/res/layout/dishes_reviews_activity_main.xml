@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.twtstudio.service.dishesreviews.MainActivity">
-
+    <include layout="@layout/dishes_reviews_toolbar"/>
     <com.twtstudio.service.dishesreviews.base.CustomViewPager
         android:id="@+id/vp_main"
         android:layout_width="wrap_content"
