@@ -30,7 +30,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "android.arch.lifecycle:viewmodel:$versions.viewmodel"
+    implementation "android.arch.lifecycle:viewmodel:1.1.1"
+    implementation "$dependenciesMap.commons"
 }
 repositories {
     mavenCentral()

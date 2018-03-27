@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.view.View
+import com.twtstudio.service.dishesreviews.base.CustomViewPager
 
 
 /**
@@ -14,15 +15,18 @@ import android.view.View
  */
 class MainActivity : AppCompatActivity() {
     private lateinit var bottomNavigationView: BottomNavigationView
-    private lateinit var viewPager: ViewPager
+    private lateinit var viewPager: CustomViewPager
     private lateinit var viewPagerAdapter: MainPagerAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dishes_reviews_activity_main)
         bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        viewPager = findViewById<ViewPager>(R.id.vp_main)
+        viewPager = findViewById<CustomViewPager>(R.id.vp_main)
         viewPagerAdapter = MainPagerAdapter(supportFragmentManager)
-        viewPager.adapter = viewPagerAdapter
+        viewPager.apply {
+            adapter = viewPagerAdapter
+            setPagingEnabled(false)
+        }
 
         bottomNavigationView.apply {
             setOnNavigationItemSelectedListener(

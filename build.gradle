@@ -13,7 +13,45 @@ buildscript {
                 anko       : '0.10.1',
                 butterknife: '8.5.1',
                 retrolambda: '3.7.0',
-                viewmodel  : '1.1.1',
+        ]
+        dependenciesMap = [
+                'mvvmkit'              : 'com.twt.service:mvvmkit:1.2.0',
+                'commons'              : 'com.twt.service:commons:1.2.0',
+                'network'              : 'com.twt.service:network:1.0.1',
+                'news'                 : 'com.twt.service:news:1.1.0',
+                'fragmentation'        : 'com.twt.service:fragmentation:1.1.0',
+                'circleprogress'       : 'com.twt.service:circleprogress:1.0.0',
+                'tjulibrary'           : 'com.twt.service:tjulibrary:1.1.0',
+                'one'                  : 'com.twt.service:one:1.0.0',
+                'yellowpages'          : 'com.twt.service:yellowpages:1.0.0',
+                'auth'                 : 'com.twt.service:auth:1.1.0',
+                'schedule'             : 'com.twt.service:schedule:1.0.0',
+                'party'                : 'com.twt.service:party:1.0.0',
+                'gpa'                  : 'com.twt.service:gpa:1.1.1-SNAPSHOT',
+                'bike'                 : 'com.twt.service:bike:1.1.0',
+                'classroom'            : 'com.twt.service:classroom:1.0.0',
+                'classroomquery'       : 'com.twt.service:classroomquery:1.0.0',
+                'fellowsearch'         : 'com.twt.service:fellowsearch:1.0.0',
+                'lostfound'            : 'com.twt.service:lostfound:1.0.1',
+
+                'support-v4'           : "com.android.support:support-v4:${versions.support}",
+                'appcompat-v7'         : "com.android.support:appcompat-v7:${versions.support}",
+                'recyclerview-v7'      : "com.android.support:recyclerview-v7:${versions.support}",
+                'cardview-v7'          : "com.android.support:cardview-v7:${versions.support}",
+                'design'               : "com.android.support:design:${versions.support}",
+
+                'multidex'             : 'com.android.support:multidex:1.0.2',
+                'constraint-layout'    : 'com.android.support.constraint:constraint-layout:1.0.2',
+
+                'lifecycle-extensions' : 'android.arch.lifecycle:extensions:1.1.0',
+                'lifecycle-compiler'   : 'android.arch.lifecycle:compiler:1.1.0',
+
+                'kotlin-stdlib'        : "org.jetbrains.kotlin:kotlin-stdlib-jre7:${versions.kotlin}",
+                'kotlinx-coroutines'   : 'org.jetbrains.kotlinx:kotlinx-coroutines-android:0.22.5',
+                'anko'                 : "org.jetbrains.anko:anko:${versions.anko}",
+
+                'butterknife'          : "com.jakewharton:butterknife:${versions.butterknife}",
+                'butterknife-compiler' : "com.jakewharton:butterknife-compiler:${versions.butterknife}",
         ]
     }
     repositories {
@@ -32,8 +70,12 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
         jcenter()
+        mavenCentral()
+        google()
+        mavenLocal()
+        maven { url 'http://dl.bintray.com/piasy/maven' }
+        maven { url 'https://jitpack.io' }
         maven { url 'https://nexus.twtstudio.com/repository/maven-public/' }
     }
 }

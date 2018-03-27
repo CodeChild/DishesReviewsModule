@@ -8,7 +8,11 @@ import android.view.View
 /**
  * Created by zhangyulong on 18-3-23.
  */
-abstract class BaseItemViewHolder(itemView: View, val lifecycleOwner: LifecycleOwner) : RecyclerView.ViewHolder(itemView)  {
-    abstract fun bind()
-    abstract fun bind(viewModel: ViewModel)
+abstract class BaseItemViewHolder(itemView: View, val lifecycleOwner: LifecycleOwner) : RecyclerView.ViewHolder(itemView) {
+    open fun bind(){
+
+    }
+    open fun bind(viewModel: ViewModel) {
+
+    }
 }

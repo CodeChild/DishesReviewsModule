@@ -12,7 +12,7 @@ import android.view.ViewGroup
 abstract class BaseListAdapter(
         val list: List<Any>,
         val context: Context,
-        private val owner: LifecycleOwner
+        internal val owner: LifecycleOwner
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     val inflater: LayoutInflater = LayoutInflater.from(context)
 
