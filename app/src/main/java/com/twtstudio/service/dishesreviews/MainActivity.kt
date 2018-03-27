@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                             return true
                         }
                     })
-            itemIconTintList= null //不设置IconTint
+            itemIconTintList = null //不设置IconTint
         }
 
 
